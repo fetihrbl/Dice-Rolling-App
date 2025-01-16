@@ -1,0 +1,41 @@
+.Die {
+    font-size: 8em;
+    padding: 0.25em;
+    color: #3498db; /* Canlı ve zarif mavi */
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%; /* Yuvarlak şekil */
+    background-color: #ecf0f1; /* Yumuşak gri arka plan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Hafif, modern gölge */
+    transition: transform 0.3s ease; /* Daha yumuşak geçiş */
+}
+
+.Die-shaking {
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; /* Yumuşak başlama ve bitiş */
+    animation-iteration-count: 1;
+}
+
+/* Animasyonun sadeleştirilmiş hali */
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -4deg);
+    }
+
+    50% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -2deg);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
